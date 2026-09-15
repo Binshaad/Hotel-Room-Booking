@@ -1,0 +1,71 @@
+/* Design tokens taken from the supplied screenshots.
+   Everything else in the app reuses these, so a colour is changed in one place. */
+:root {
+  --navy: #123a63;
+  --navy-dark: #0f3055;
+  --navy-deep: #0d2f52;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --line: #d9dee5;
+  --line-soft: #e5e7eb;
+  --page-bg: #eef0f3;
+  --card: #ffffff;
+  --panel-body: #ffffff;
+  --beige: #e9e3d3;
+  --beige-dark: #ddd5c0;
+  --gold-bg: #f0e4c3;
+  --gold-line: #c9ab5e;
+  --gold-text: #6b511a;
+  --table-stripe: #faf9f5;
+  --green: #2f855a;
+  --green-bg: #d9ead3;
+  --red: #c53030;
+  --red-bg: #fbe3e3;
+  --amber-bg: #f6c99b;
+  --blue-bg: #7aa2d6;
+  --grey-bg: #cfcfcf;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-sm: 6px;
+  --shadow-card: 0 1px 3px rgba(16, 24, 40, 0.08), 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial,
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+input,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Keyboard users must always see where they are. */
+:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}

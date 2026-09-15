@@ -1,0 +1,255 @@
+/* Shared chrome used by all three pages: the fake browser bar,
+   the page header with the search box, and the panel/card shells. */
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background: linear-gradient(#dde5f2, #eef1f6);
+  border-bottom: 1px solid var(--line);
+}
+
+.browser-bar__caret {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.browser-bar__tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #374151;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.browser-bar__favicon {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #3b82f6;
+}
+
+.browser-bar__close {
+  border: 0;
+  background: none;
+  color: var(--muted);
+  padding: 0 2px;
+}
+
+.browser-bar__window {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 24px 18px;
+  background: #fff;
+}
+
+.page__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.page__search {
+  position: relative;
+  flex: 0 1 560px;
+}
+
+.page__search input {
+  width: 100%;
+  padding: 9px 12px 9px 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+
+.page__search .icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+}
+
+.back-link {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.back-link:hover {
+  background: #f3f6fa;
+}
+
+.page__body {
+  flex: 1;
+  padding: 0 24px 28px;
+}
+
+/* Panel = white card with the dark navy title strip on top. */
+.panel {
+  background: var(--panel-body);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel__head {
+  background: var(--navy);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 13px 18px;
+}
+
+.panel__body {
+  padding: 16px 18px;
+  flex: 1;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 16px 18px;
+}
+
+/* Form basics */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field label {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.field input,
+.field select {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  width: 100%;
+}
+
+.field input:disabled,
+.field select:disabled {
+  background: #f3f4f6;
+  color: var(--muted);
+}
+
+/* Buttons */
+.btn {
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  padding: 9px 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.btn--primary {
+  background: var(--navy-deep);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #0a2542;
+}
+
+.btn--soft {
+  background: var(--beige);
+  color: #3f3a2b;
+  border-color: var(--beige-dark);
+}
+
+.btn--soft:hover {
+  background: var(--beige-dark);
+}
+
+.btn--ghost {
+  background: #fff;
+  border-color: var(--line);
+  color: #374151;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.room-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--gold-bg);
+  border: 1px solid var(--gold-line);
+  color: var(--gold-text);
+  border-radius: var(--radius-sm);
+  padding: 7px 14px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Message strips */
+.message {
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.message--error {
+  background: var(--red-bg);
+  border: 1px solid #f0b4b4;
+  color: #8a2020;
+}
+
+.message--info {
+  background: #eef3f9;
+  border: 1px solid #cfdcec;
+  color: #33506f;
+}
+
+.message--success {
+  background: var(--green-bg);
+  border: 1px solid #a8cfa0;
+  color: #23603f;
+}
